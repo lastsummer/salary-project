@@ -2,11 +2,11 @@ package com.e104.salary.exception;
 
 import java.util.Date;
 
-public class ExceptionResource {
+public class ExceptionResponse {
 	private Date timestamp;
 	private String message;
 	private String details;
-	public ExceptionResource(Date timestamp, String message, String details) {
+	public ExceptionResponse(Date timestamp, String message, String details) {
 		super();
 		this.timestamp = timestamp;
 		this.message = message;
