@@ -37,6 +37,7 @@
 ### swagger
 - version 3.0 oapi
 - 設定檔 SwaggerConfig.java
+- 網址：http://localhost:6565/swagger-ui/
 
 ### 環境變數
 待補充
