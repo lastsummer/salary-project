@@ -1,5 +1,6 @@
 package com.e104.salary.router.api;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -14,7 +15,11 @@ import com.e104.salary.exception.CustomStatusException;
 import com.e104.salary.router.model.Salary;
 import com.e104.salary.service.salary.SalaryService;
 
+import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.Operation;
 
+
+@Api(tags = "Salary")
 @RestController
 @RequestMapping("/api/salary")
 public class SalaryController {
@@ -22,7 +27,8 @@ public class SalaryController {
 	@Autowired
 	private SalaryService salaryService;
 	
-	@GetMapping()
+	@Operation(summary = "取得單一Salary")
+	@GetMapping(value = "", produces = { "application/json" })
 	public String getSingleSalary(){
 		return salaryService.getSingleSalary();
 	}
@@ -33,7 +39,8 @@ public class SalaryController {
 	}
 	
 	@GetMapping("/error/{statusCode}")
-	public String getSingleSalary(@PathVariable int statusCode) throws Exception{
+	public String getSingleSalary(@PathVariable int statusCode, @Value("${env}") String env) throws Exception{
+		System.out.println("env-->"+env);
 		if(statusCode==400) {
 			throw new CustomStatusException("show stateCode 400", HttpStatus.BAD_REQUEST);
 		}else if(statusCode==401) {
@@ -41,6 +48,7 @@ public class SalaryController {
 		}else if(statusCode==403) {
 			throw new CustomStatusException("show stateCode 403", HttpStatus.FORBIDDEN);
 		}
+		
 		throw new Exception("other");
 	}
 }
