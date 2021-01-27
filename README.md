@@ -39,15 +39,15 @@
 - 設定檔 SwaggerConfig.java
 - 網址：http://localhost:6565/swagger-ui/
 
+### 功能
+- @JsonFilter
+
 ### 環境變數
 待補充
 
-### db 連線
-待補充
-
-### 登入驗證
-待補充
-
 ### CI/CD
+待補充
+
+### Log
 待補充
 
