@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.e104.salary.exception.CustomStatusException;
 import com.e104.salary.router.model.Salary;
 import com.e104.salary.router.model.SomeBean;
-import com.e104.salary.service.salary.SalaryService;
+import com.e104.salary.service.SalaryService;
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
 import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;

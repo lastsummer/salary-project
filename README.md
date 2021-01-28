@@ -1,5 +1,14 @@
 # salary-project
 
+## 專案架構
+ - [config](https://github.com/lastsummer/salary-project/tree/main/src/main/java/com/e104/salary/config)：設定檔
+ - [exception](https://github.com/lastsummer/salary-project/tree/main/src/main/java/com/e104/salary/config)：例外處理，也處理了status code
+ - [router](https://github.com/lastsummer/salary-project/tree/main/src/main/java/com/e104/salary/router)：request path
+ - [model](https://github.com/lastsummer/salary-project/tree/main/src/main/java/com/e104/salary/router/model)：response model
+ - [Service Interface](https://github.com/lastsummer/salary-project/tree/main/src/main/java/com/e104/salary/service)：Service interface
+ - [Service Implement](https://github.com/lastsummer/salary-project/tree/main/src/main/java/com/e104/salary/service/impl):Service 實作
+
+
 ## Framework
 - SpringBoot
 - Spring JPA
